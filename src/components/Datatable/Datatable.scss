@@ -1,0 +1,39 @@
+.data-table {
+  border-radius: 10px;
+  border: 1px solid #374151;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse; /* Unisce i bordi delle celle */
+}
+
+.data-table thead tr {
+  background-color: #374151;
+  margin: 0;
+  padding: 0;
+}
+
+.data-table tbody tr {
+  background-color: #1f2b36;
+  margin: 0;
+  padding: 0;
+}
+
+.data-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.data-table {
+  border-radius: 10px;
+  border: 1px solid #374151;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse !important; /* Unisce i bordi delle celle */
+}
+
+.data-table th, .data-table td {
+  border: none !important; /* Rimuove i bordi delle celle */
+  padding: 8px; /* Aggiunge padding alle celle per separare il testo dai bordi */
+  text-align: left; /* Allinea il testo a sinistra nelle celle */
+}

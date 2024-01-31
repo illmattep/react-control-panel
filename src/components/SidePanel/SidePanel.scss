@@ -1,0 +1,53 @@
+  .side-panel {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center; // BEGIN: Center align the title horizontally
+  }
+
+  .menu {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-item {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    text-align: left; // BEGIN: Align the menu items at the left
+    color: #ffffff;
+
+    &:hover {
+      background-color: #374151;
+      border-radius: 5px;
+    }
+  }
+  .menu-item.selected {
+    background-color: #374151;
+    border-radius: 5px;
+  }
+
+  .separator {
+    height: 1px;
+    background-color: #9ca2ae;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
