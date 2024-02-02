@@ -1,5 +1,8 @@
 .app {
     display: flex;
+    min-height: 100vh;
+    min-width: fit-content;
+    width: 100%;
     background-color: #111926;
     color:#ddd;
   }
