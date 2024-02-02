@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Datatable.scss';
+import * as icons from '../../assets/icons/icons';
 
 interface DataTableProps {
   data: Array<{
@@ -39,6 +40,19 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
     return 0;
   });
 
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'Pending':
+        return { className: 'status-pending', icon: icons.pending };
+      case 'Completed':
+        return { className: 'status-completed', icon: icons.completed };
+      case 'Failed':
+        return { className: 'status-failed', icon: icons.failed };
+      default:
+        return { className: '', icon: icons.failed  };
+    }
+  };
+
   return (
     <table className="data-table">
       <thead>
@@ -60,17 +74,21 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
           </th>
         </tr>
       </thead>
-      <tbody>
-        {sortedData.map((item) => (
-          <tr key={item.id}>
-            <td>{item.id}</td>
-            <td>{item.username}</td>
-            <td>{item.dateTime}</td>
-            <td>{item.amount}</td>
-            <td>{item.status}</td>
-          </tr>
-        ))}
-      </tbody>
+            <tbody>
+              {sortedData.map((item) => (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.username}</td>
+                  <td>
+                    <div className='Time'>{item.dateTime}</div>
+                  </td>
+                  <td>{item.amount}€</td>
+                  <td>
+                    <div className={getStatusColor(item.status).className}><img src={getStatusColor(item.status).icon} /> {item.status}</div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
     </table>
   );
 };

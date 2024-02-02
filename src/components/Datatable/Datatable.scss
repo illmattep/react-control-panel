@@ -29,11 +29,64 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border-collapse: collapse !important; /* Unisce i bordi delle celle */
+  border-collapse: collapse; /* Unisce i bordi delle celle */
 }
 
 .data-table th, .data-table td {
   border: none !important; /* Rimuove i bordi delle celle */
-  padding: 8px; /* Aggiunge padding alle celle per separare il testo dai bordi */
+  padding: 8px; 
   text-align: left; /* Allinea il testo a sinistra nelle celle */
+  font-size: 14px; /* Imposta la dimensione del testo nelle celle */
+}
+
+.status-pending {
+  color: #f59e0b;
+  background-color: #374151;
+  max-width: fit-content;
+  padding: 5px;
+  padding-bottom: 2px;
+  border-radius:8px;
+  border: 1px solid #f59e0b;
+  font-size: 10px;
+}
+.status-failed {
+  color: #ef4444;
+  background-color: #374151;
+  max-width: fit-content;
+  padding: 5px;
+  padding-bottom: 2px;
+  border-radius:8px;
+  border: 1px solid #ef4444;
+  font-size: 10px;
+}
+
+.status-completed {
+  color: #10b981;
+  background-color: #374151;
+  max-width: fit-content;
+  padding: 5px;
+  padding-bottom: 2px;
+  border-radius:8px;
+  border: 1px solid #10b981;
+  font-size: 10px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+td img {
+  max-width: 13px;
+  margin-right: 5px;
+  padding-bottom: 3px;
+  vertical-align: middle; // Aligns the image to the center vertically
+}
+
+.Time {
+  color: #7e7e7e;
+  font-size: 12px;
+  font-weight: 500;
 }
