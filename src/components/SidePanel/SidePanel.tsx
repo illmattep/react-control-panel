@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './SidePanel.scss';
 import * as icons from '../../assets/icons/icons';
-import arrow from '../../assets/icons/arrow.svg'; // Import the arrow icon
 
 interface MenuItem {
   icon: string;
@@ -37,7 +36,7 @@ const SidePanel: React.FC = () => {
       return updatedMenuItems;
     });
   };
-
+  
   return (
     <div className="side-panel">
       <div className="menu">
@@ -47,11 +46,6 @@ const SidePanel: React.FC = () => {
             <div className="button-title">
               <img src={item.icon} alt={item.text} />
               {item.text}
-              {item.options.length > 0 && (
-                <span className={`arrow-icon ${item.isOpen ? 'flip' : ''}`}>
-                  <img src={arrow} alt="Arrow" /> {/* Use the arrow icon */}
-                </span>
-              )}
             </div>
             {item.isOpen && (
               <div className="submenu">
@@ -82,5 +76,4 @@ const SidePanel: React.FC = () => {
     </div>
   );
 };
-
 export default SidePanel;

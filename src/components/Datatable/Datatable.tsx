@@ -61,16 +61,16 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
             ID {sortConfig?.key === 'id' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
           </th>
           <th onClick={() => handleSort('username')}>
-            Username {sortConfig?.key === 'username' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
+            USERNAME {sortConfig?.key === 'username' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
           </th>
           <th onClick={() => handleSort('dateTime')}>
-            Date & Time {sortConfig?.key === 'dateTime' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
+            DATE & TIME {sortConfig?.key === 'dateTime' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
           </th>
           <th onClick={() => handleSort('amount')}>
-            Amount {sortConfig?.key === 'amount' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
+            AMOUNT {sortConfig?.key === 'amount' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
           </th>
           <th onClick={() => handleSort('status')}>
-            Status {sortConfig?.key === 'status' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
+            STATUS {sortConfig?.key === 'status' && (sortConfig.direction === 'ascending' ? '↑' : '↓')}
           </th>
         </tr>
       </thead>
@@ -84,7 +84,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
                   </td>
                   <td>{item.amount}€</td>
                   <td>
-                    <div className={getStatusColor(item.status).className}><img src={getStatusColor(item.status).icon} /> {item.status}</div>
+                    <div className={getStatusColor(item.status).className}><img src={getStatusColor(item.status).icon } alt='img' /> {item.status}</div>
                   </td>
                 </tr>
               ))}

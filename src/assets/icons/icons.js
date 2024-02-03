@@ -11,6 +11,10 @@ import settings from './settings.svg';
 import DashboardSettings from './DashboardSettings.svg';
 import UserSettings from './UserSettings.svg';
 import Globe from './Globe.svg';
+import money from './money.svg';
+import calendar from './calendar.svg';
+import arrow from './arrow.svg';
+import sales from  './sales.svg';
 // Check Circles
 import completed from './checkcircles/completed.svg';
 import failed from './checkcircles/failed.svg';
@@ -21,6 +25,10 @@ export {
     failed,
     pending,
     //Icons
+    sales,
+    calendar,
+    arrow,
+    money,
     Globe,
     UserSettings,
     DashboardSettings,
